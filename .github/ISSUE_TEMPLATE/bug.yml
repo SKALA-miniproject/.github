@@ -1,0 +1,37 @@
+name: "🐛 Bug"
+description: "버그 제보/수정"
+title: "[BUG] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **이슈 제목 규칙:** `[BUG] 한 줄 요약`
+        - 예: `[BUG] 결제 성공 후 좌석이 HOLD로 남음`
+
+  - type: textarea
+    id: what
+    attributes:
+      label: 현상
+      description: 어떤 문제가 발생했나요? (한두 줄)
+      placeholder: 예) 결제 성공 응답 이후에도 좌석 상태가 확정되지 않는다.
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: 재현 방법 (선택)
+      placeholder: |
+        1) ...
+        2) ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 기대 결과 (선택)
+      placeholder: 예) 결제 성공 시 좌석 상태가 CONFIRMED로 바뀌어야 한다.
+    validations:
+      required: false
