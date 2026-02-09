@@ -1,0 +1,30 @@
+name: "✨ Feature"
+description: "기능 추가/변경"
+title: "[FEAT] "
+labels: ["feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **이슈 제목 규칙:** `[FEAT] 한 줄 요약`
+        - 예: `[FEAT] 대기열 토큰 발급 API 추가`
+
+  - type: textarea
+    id: desc
+    attributes:
+      label: 배경 / 설명
+      description: 무엇을, 왜 하는지 한두 줄로
+      placeholder: 예) 좌석 선점을 위해 대기열 토큰 발급 API가 필요하다.
+    validations:
+      required: true
+
+  - type: textarea
+    id: ac
+    attributes:
+      label: 완료 기준 (AC)
+      description: 체크박스 1~3개만
+      placeholder: |
+        - [ ] 기능 동작 확인
+        - [ ] PR 생성 후 본문에 `Closes #이슈번호` 연결
+    validations:
+      required: true
